@@ -1,6 +1,11 @@
 [
 	{
-		"parser" : "本院委員(?<proposer>.*)等.*人擬具「(?<title>.*)」，請審議案",
+		"pattern" : "本院委員(?<proposer>.*)等.*人擬具「(?<title>.*)」，請審議案",
 		"type" : "announcement"
+	},
+	{
+		"pattern" : "^\\d{1,3}.*本院(?<name>.{1,2}委員.{1,3})，(?<description>.*)，特向行政院提出質詢。$",
+    "type" : "interpellation",
+    "rule" : "merge_name1"
 	}
 ]

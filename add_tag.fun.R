@@ -14,7 +14,7 @@ add_tag <- function(tag, gregexpr.result) {
 		item.name <- colnames(attr(gregexpr.result.element, "capture.start"))
 		capture.start <- attr(gregexpr.result.element, "capture.start")
 		capture.length <- attr(gregexpr.result.element, "capture.length")
-		obj <- list()
+		obj <- list(type=type)
 		for(name in item.name) {
 			obj[[name]] <- substring(text, capture.start[,name], capture.start[,name] + capture.length[,name] - 1)
 		}
