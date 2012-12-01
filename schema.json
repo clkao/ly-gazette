@@ -1,0 +1,6 @@
+[
+	{
+		"parser" : "本院委員(?<proposer>.*)等.*人擬具「(?<title>.*)」，請審議案",
+		"type" : "announcement"
+	}
+]
